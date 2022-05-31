@@ -1,0 +1,11 @@
+[Unit]
+Description=Setup Ethernet1
+After=network.target
+
+[Service]
+ExecStart=bash /home/ubuntu/set_eth1.set_eth1
+WorkingDirectory=/home/ubuntu
+User=root
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=RTSP server service 
+After=network.target start-setup-eth1.service
+
+[Service]
+ExecStart=bash /home/ubuntu/rtsp-server.sh
+WorkingDirectory=/home/ubuntu
+User=root
+
+[Install]
+WantedBy=multi-user.target
